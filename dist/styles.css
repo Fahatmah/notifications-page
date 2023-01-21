@@ -91,6 +91,11 @@ main {
 }
 
 @media screen and (min-width: 680px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   main {
     box-shadow: 0 0 60px hsl(205deg, 33%, 90%);
     padding: 2rem;
