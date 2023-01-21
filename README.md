@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [)
-- Live Site URL: [)
+- Solution URL: [Repository](https://github.com/Fahatmah/notifications-page.git)
+- Live Site URL: [Front-end Mentor Challenge](https://notifications-page-main-fem-challenge.netlify.app/)
 
 ## My process
 
