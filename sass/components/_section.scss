@@ -1,0 +1,102 @@
+@use '../abstracts' as *;
+
+.notification-items {
+  @include flex(flex-start, flex-start);
+  flex-direction: column;
+  gap: 0.5rem;
+
+  .item {
+    width: 100%;
+    @include flex($x: space-between);
+    gap: 0.8rem;
+    padding: 0.8rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: hsla(212, 12%, 68%, 0.152);
+      border-radius: 0.5rem;
+    }
+
+    &.active {
+      background-color: map-get($colors, l-300);
+      border-radius: 0.5rem;
+
+      .notification p:nth-child(1) {
+        position: relative;
+        display: block;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          margin-left: 0.3rem;
+          transform: translateY(-50%);
+          width: 0.4rem;
+          height: 0.4rem;
+          border-radius: 50%;
+          background-color: map-get($colors, pr-1);
+        }
+      }
+    }
+    .profile {
+      width: 100%;
+      max-width: 2.4rem;
+      border-radius: 50%;
+      justify-self: flex-start;
+      align-self: flex-start;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .notification {
+      // outline: $debug;
+      width: 100%;
+
+      .name,
+      .bold {
+        font-weight: $fw-bold;
+        transition: $transition;
+        cursor: pointer;
+
+        &:hover {
+          color: map-get($colors, pr-2);
+        }
+      }
+    }
+  }
+
+  .private-message {
+    margin-top: 0.8rem;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    border: 1px solid map-get($colors, l-400);
+    transition: $transition;
+    cursor: pointer;
+
+    &:hover {
+      background-color: map-get($colors, l-300);
+    }
+  }
+
+  .item:nth-child(5) {
+    .notification {
+      @include flex($x: space-between);
+
+      .photo-post {
+        width: 3rem;
+        justify-self: flex-start;
+        align-self: flex-start;
+        border-radius: 0.5rem;
+        // transition: $transition;
+        cursor: pointer;
+
+        &:hover {
+          outline: 4px solid map-get($colors, l-400);
+        }
+      }
+    }
+  }
+}

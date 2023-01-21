@@ -1,0 +1,11 @@
+@mixin flex($x: center, $y: center) {
+  display: flex;
+  justify-content: $x;
+  align-items: $y;
+}
+
+@mixin ms {
+  @media screen and (min-width: 680px) {
+    @content;
+  }
+}
